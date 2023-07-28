@@ -45,7 +45,7 @@ const createTimerAppearance = timer => {
 };
 
 
-const timer = (timer, deadline) => {
+const timer = (timer, deadline, gmt) => {
   const {
     dayNum,
     dayParam,
@@ -55,9 +55,8 @@ const timer = (timer, deadline) => {
     minParam,
   } = createTimerAppearance(timer);
 
-
   const getTimeRemaining = () => {
-    const dateStop = new Date(deadline).getTime();
+    const dateStop = new Date(`${deadline} GMT${gmt}:00`).getTime();
     const dateNow = Date.now();
     const timeRemaining = dateStop - dateNow;
 
@@ -124,12 +123,12 @@ const timer = (timer, deadline) => {
   start();
 };
 
-const setTimer = () => {
+const setTimer = (gmt) => {
   const timerBlock = document.querySelector('[data-timer-deadline]');
   return timerBlock ?
-  timer(timerBlock, timerBlock.dataset.timerDeadline) : null;
+  timer(timerBlock, timerBlock.dataset.timerDeadline, gmt) : null;
 };
 
 window.addEventListener('DOMContentLoaded', () => {
-  setTimer();
+  setTimer('+03');
 });

@@ -52,11 +52,13 @@
 }
 
 .block-one__timer-value {
+  width: 70px;
   font-size: 60px;
   line-height: 78px;
 }
 
 .block-one__timer-parameter {
+  width: 120px;
   font-size: 32px;
   line-height: 42px;
 }
@@ -93,11 +95,13 @@
   }
 
   .block-one__timer-value {
+    width: 47px;
     font-size: 40px;
     line-height: 52px;
   }
   
   .block-one__timer-parameter {
+    width: 75px;
     font-size: 20px;
     line-height: 26px;
   }
@@ -135,11 +139,13 @@
   }
 
   .block-one__timer-value {
+    width: 35px;
     font-size: 30px;
     line-height: 39px;
   }
   
   .block-one__timer-parameter {
+    width: 60px;
     font-size: 16px;
     line-height: 21px;
   }
@@ -178,11 +184,13 @@
   }
 
   .block-one__timer-value {
+    width: 25px;
     font-size: 20px;
     line-height: 26px;
   }
   
   .block-one__timer-parameter {
+    width: 44px;
     font-size: 12px;
     line-height: 16px;
   }
