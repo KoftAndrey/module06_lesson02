@@ -35,6 +35,8 @@ const createTimerAppearance = timer => {
   timer.append(title, mainBlock);
 
   return {
+    title,
+    mainBlock,
     dayNum: dayBlock.value,
     dayParam: dayBlock.parameter,
     hourNum: hourBlock.value,
@@ -47,6 +49,8 @@ const createTimerAppearance = timer => {
 
 const timer = (timer, deadline, gmt) => {
   const {
+    title,
+    mainBlock,
     dayNum,
     dayParam,
     hourNum,
@@ -117,6 +121,8 @@ const timer = (timer, deadline, gmt) => {
       dayNum.textContent = '00';
       hourNum.textContent = '00';
       minNum.textContent = '00';
+      title.remove();
+      mainBlock.remove();
     }
   };
 
